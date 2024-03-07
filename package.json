@@ -1,0 +1,12 @@
+{
+  "name": "zsk6-check-type",
+  "version": "1.0.1",
+  "description": "这个一个zsk6的类型检测包",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zsk6",
+  "license": "ISC"
+}
