@@ -2,17 +2,22 @@
   "name": "zsk6-check-type",
   "version": "1.0.1",
   "description": "这个一个zsk6的类型检测包",
-  "main": "index.js",
-  "type": "module",
+  "main": "./dist/bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack "
   },
   "author": "zsk6",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.11.25",
+    "@types/webpack": "^5.28.5",
     "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.4.2",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "type": "module"
 }

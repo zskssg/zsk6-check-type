@@ -1,5 +1,11 @@
+/*
+ * @Date: 2024-03-11 16:36:29
+ * @LastEditors: zhangsk
+ * @LastEditTime: 2024-03-11 17:39:32
+ * @FilePath: \zsk6-check-type\src\type.ts
+ * @Label: Do not edit
+ */
 
-type TypeValue = string | "null" | "string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"
 
 export default function checkType(value: any): TypeValue {
   if (value === null) {

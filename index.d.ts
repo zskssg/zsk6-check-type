@@ -1,0 +1,1 @@
+declare type TypeValue = string | "null" | "string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"
