@@ -1,7 +1,7 @@
 /*
  * @Date: 2024-03-11 16:41:52
  * @LastEditors: zhangsk
- * @LastEditTime: 2024-03-11 18:10:23
+ * @LastEditTime: 2024-03-12 10:17:02
  * @FilePath: \zsk6-check-type\webpack.config.js
  * @Label: Do not edit
  */
@@ -15,9 +15,7 @@ export default {
     filename: "bundle.js",
     clean: true,
     library: {
-      name: "Zsk6CheckType",
-      type: "commonjs-module",
-      // export: "default",
+      type: "module",
     },
   },
   experiments: {
