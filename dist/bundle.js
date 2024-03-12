@@ -14,7 +14,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   CheckType: () => (/* binding */ CheckType),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _type__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./type */ \"./src/type.ts\");\n\nconst CheckType = _type__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n    CheckType: _type__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n});\n\n\n//# sourceURL=webpack://zsk6-check-type/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   CheckType: () => (/* binding */ CheckType),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _type__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./type */ \"./src/type.ts\");\n\nconst CheckType = _type__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n    CheckType: _type__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n});\n\n\n//# sourceURL=webpack://zsk6-check-type/./src/index.ts?");
 
 /***/ }),
 
@@ -24,7 +24,7 @@ eval("/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harm
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ checkType)\n/* harmony export */ });\n/*\n * @Date: 2024-03-11 16:36:29\n * @LastEditors: zhangsk\n * @LastEditTime: 2024-03-11 17:39:32\n * @FilePath: \\zsk6-check-type\\src\\type.ts\n * @Label: Do not edit\n */\nfunction checkType(value) {\n    if (value === null) {\n        return \"null\";\n    }\n    const baseType = typeof value;\n    // 基本类型\n    if (![\"object\", \"function\"].includes(baseType)) {\n        return baseType;\n    }\n    // Symbol.toStringTag 通常指定对象类的“display name”\n    // 它在 Object.prototype.toString() 中使用。\n    const tag = value[Symbol.toStringTag];\n    if (typeof tag === \"string\") {\n        return tag;\n    }\n    // 如果它是一个函数，其源代码以 \"class\" 关键字开头\n    if (baseType === \"function\" &&\n        Function.prototype.toString.call(value).startsWith(\"class\")) {\n        return \"class\";\n    }\n    // 构造函数的名称；例如 `Array`、`GeneratorFunction`、`Number`、`String`、`Boolean` 或 `MyCustomClass`\n    const className = value.constructor.name;\n    if (typeof className === \"string\" && className !== \"\") {\n        return className;\n    }\n    // 在这一点上，没有合适的方法来获取值的类型，因此我们使用基本实现。\n    return baseType;\n}\n\n\n//# sourceURL=webpack://zsk6-check-type/./src/type.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ checkType)\n/* harmony export */ });\n/*\n * @Date: 2024-03-11 16:36:29\n * @LastEditors: zhangsk\n * @LastEditTime: 2024-03-11 17:39:32\n * @FilePath: \\zsk6-check-type\\src\\type.ts\n * @Label: Do not edit\n */\nfunction checkType(value) {\n    if (value === null) {\n        return \"null\";\n    }\n    const baseType = typeof value;\n    // 基本类型\n    if (![\"object\", \"function\"].includes(baseType)) {\n        return baseType;\n    }\n    // Symbol.toStringTag 通常指定对象类的“display name”\n    // 它在 Object.prototype.toString() 中使用。\n    const tag = value[Symbol.toStringTag];\n    if (typeof tag === \"string\") {\n        return tag;\n    }\n    // 如果它是一个函数，其源代码以 \"class\" 关键字开头\n    if (baseType === \"function\" &&\n        Function.prototype.toString.call(value).startsWith(\"class\")) {\n        return \"class\";\n    }\n    // 构造函数的名称；例如 `Array`、`GeneratorFunction`、`Number`、`String`、`Boolean` 或 `MyCustomClass`\n    const className = value.constructor.name;\n    if (typeof className === \"string\" && className !== \"\") {\n        return className;\n    }\n    // 在这一点上，没有合适的方法来获取值的类型，因此我们使用基本实现。\n    return baseType;\n}\n\n\n//# sourceURL=webpack://zsk6-check-type/./src/type.ts?");
 
 /***/ })
 
@@ -70,6 +70,17 @@ eval("/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harm
 /******/ /* webpack/runtime/hasOwnProperty shorthand */
 /******/ (() => {
 /******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/make namespace object */
+/******/ (() => {
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = (exports) => {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
 /******/ })();
 /******/ 
 /************************************************************************/

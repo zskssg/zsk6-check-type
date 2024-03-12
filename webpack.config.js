@@ -1,7 +1,7 @@
 /*
  * @Date: 2024-03-11 16:41:52
  * @LastEditors: zhangsk
- * @LastEditTime: 2024-03-12 10:17:02
+ * @LastEditTime: 2024-03-12 11:21:55
  * @FilePath: \zsk6-check-type\webpack.config.js
  * @Label: Do not edit
  */
@@ -23,6 +23,7 @@ export default {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    mainFields: ["module", "main"],
   },
   module: {
     rules: [
@@ -35,6 +36,6 @@ export default {
   },
   mode: "development",
   optimization: {
-    usedExports: "global", //  关闭副作用标识功能
+    usedExports: false, //  是否 Tree Shaking
   },
 };

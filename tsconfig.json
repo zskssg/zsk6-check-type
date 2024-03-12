@@ -7,11 +7,5 @@
     // "esModuleInterop": true,
     // "allowSyntheticDefaultImports": true
   },
-  "include": ["./src/**/*", "*.d.ts"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-    // "esm": true
-  }
+  "include": ["./src/**/*", "*.d.ts"]
 }
